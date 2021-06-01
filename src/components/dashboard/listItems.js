@@ -40,12 +40,13 @@ export const mainListItems = (
       </ListItemIcon>
       <Link to = "/dashboard/createStudent" > <ListItemText primary="Add Student" /> </Link>
     </ListItem>
-    {/* <ListItem button>
+    
+    <ListItem button>
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
-      <ListItemText primary="Integrations" />
-    </ListItem> */}
+      <Link to = "/dashboard/view" > <ListItemText primary="View Attendance" /> </Link>
+    </ListItem>
   </div>
 );
 

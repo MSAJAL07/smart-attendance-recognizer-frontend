@@ -22,18 +22,19 @@ const useStyles = makeStyles({
  
 });
 
-export default function Deposits() {
+export default function Deposits({id,name,setShow}) {
   const classes = useStyles();
 
 const url = 'http://localhost:8000/api/v1/collectImg'
 const handleClick = (event) => {
-    event.preventDefault();
-    axios.get(url)
-    .then((response)=>{
-        console.log(response)
-    }
-    )
-  }
+    // event.preventDefault();
+    // axios.get(url)
+    // .then((response)=>{
+    //     console.log(response)
+    // }
+    // )
+    setShow(true)
+  } 
 
   return (
     <React.Fragment>
