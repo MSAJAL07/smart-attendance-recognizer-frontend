@@ -64,28 +64,29 @@ export default function SignUp() {
   const SignupUrl = 'http://localhost:8000/api/v1/college-registration'
 
   const signup = () => {
-   const data = {
-    "email_id": email_id,
-    "username": user_name,
-    "password": password,
-    "confirm_password": confirm_password,
-    "org_name": org_name,
-    "org_address": "string",
-    "establishment_year": 10
-    }
-    axios.post(
-      SignupUrl,
-      data,
-      {
-        headers : {
-          "Content-Type": "application/json"
-        }
-      }).then((response)=>{
-        console.log(response.data)
-        window.location.href = "/sign-in"
-      }).catch((err)=>{
+    window.location.href = "/dashboard"
+  //  const data = {
+  //   "email_id": email_id,
+  //   "username": user_name,
+  //   "password": password,
+  //   "confirm_password": confirm_password,
+  //   "org_name": org_name,
+  //   "org_address": "string",
+  //   "establishment_year": 10
+  //   }
+  //   axios.post(
+  //     SignupUrl,
+  //     data,
+  //     {
+  //       headers : {
+  //         "Content-Type": "application/json"
+  //       }
+  //     }).then((response)=>{
+  //       console.log(response.data)
+  //       window.location.href = "/dashboard"
+  //     }).catch((err)=>{
 
-      })
+  //     })
   }
 
 
@@ -97,7 +98,7 @@ export default function SignUp() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign up
+          Create Class
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
@@ -107,7 +108,7 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
+                label="Class Name"
                 name="email"
                 autoComplete="email"
                 value = {email_id}
@@ -120,7 +121,7 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="username"
-                label="User Name"
+                label="Class Id"
                 name="username"
                 autoComplete="username"
                 value = {user_name}
@@ -140,7 +141,7 @@ export default function SignUp() {
                 onChange = {handleorg_name}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            {/* <Grid item xs={12} sm={6}>
               <TextField
                 variant="outlined"
                 required
@@ -167,7 +168,7 @@ export default function SignUp() {
                 value = {confirm_password}
                 onChange = {handleconfirm_password}
               />
-            </Grid>
+            </Grid> */}
             {/* <Grid item xs={12}>
               <TextField
                 variant="outlined"
@@ -180,12 +181,12 @@ export default function SignUp() {
                 autoComplete="current-password"
               />
             </Grid> */}
-            <Grid item xs={12}>
+            {/* <Grid item xs={12}>
               <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" color="primary" />}
                 label="I want to receive inspiration, marketing promotions and updates via email."
               />
-            </Grid>
+            </Grid> */}
           </Grid>
           <Button
             type="button"
@@ -195,15 +196,15 @@ export default function SignUp() {
             className={classes.submit}
             onClick = {signup}
           >
-            Sign Up
+            Create
           </Button>
-          <Grid container justify="flex-end">
+          {/* <Grid container justify="flex-end">
             <Grid item>
               <Link href="/sign-in" variant="body2">
                 Already have an account? Sign in
               </Link>
             </Grid>
-          </Grid>
+          </Grid> */}
         </form>
       </div>
       <Box mt={5}>

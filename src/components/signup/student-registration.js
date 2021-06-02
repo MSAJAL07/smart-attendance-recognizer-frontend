@@ -60,6 +60,9 @@ export default function SignUp() {
   const [password , setPassword] = useState("")
   const [confirm_password , setConfirmPassword] = useState("")
   const [org_name , setOrg_name] = useState("")
+
+  const [mobileNo , setMobileNo] = useState("")
+  const handlemobile = e=> setMobileNo(e.target.value)
   
   const handleEamil = e => setEmailId(e.target.value)
   const handleuser_name = e => setUsername(e.target.value)
@@ -141,9 +144,9 @@ export default function SignUp() {
                 id="mobile"
                 label="mobile number"
                 name="username"
-                autoComplete="username"
-                value = {user_name}
-                onChange = {handleuser_name}
+               // autoComplete="username"
+                value = {mobileNo}
+                onChange = {handlemobile}
               />
             </Grid>
             <Grid item xs={12}>
@@ -155,8 +158,8 @@ export default function SignUp() {
                 label="Branch"
                 name="branch"
                 autoComplete="branch"
-                value = {user_name}
-                onChange = {handleuser_name}
+                // value = {user_name}
+                // onChange = {handleuser_name}
               />
             </Grid>
            
